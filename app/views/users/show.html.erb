@@ -1,0 +1,13 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <!-- calls the helper method which finds the image for user -->
+        <%= gravatar_for @user %>
+        <!-- displays user name -->
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
