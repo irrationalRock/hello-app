@@ -17,6 +17,9 @@ Rails.application.configure do
   config.public_file_server.headers = {
     'Cache-Control' => 'public, max-age=3600'
   }
+  
+  host = 'https://linux-rails-irrationalrock.c9users.io' # Don't use this literally; use your local dev host instead
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
